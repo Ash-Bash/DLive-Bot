@@ -1,0 +1,43 @@
+{
+  "name": "dlive-bot",
+  "version": "0.0.1",
+  "description": "A Bot application for DLive",
+  "main": "./src/app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dlive",
+    "webpack",
+    "bot",
+    "electron",
+    "modular"
+  ],
+  "author": "Ashley Chapman",
+  "license": "ISC",
+  "dependencies": {
+    "@reactivex/rxjs": "^6.5.1",
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
+    "@types/reactstrap": "^8.0.1",
+    "bootstrap": "^4.3.1",
+    "lino-js": "^1.0.19",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "reactstrap": "^8.0.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^2.1.1",
+    "electron": "^5.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "typescript": "^3.4.5",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
