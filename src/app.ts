@@ -5,7 +5,7 @@ function createWindow () {
   let win = new BrowserWindow({ width: 800, height: 600 });
 
   // and load the index.html of the app.
-  win.loadFile(__dirname + '/frontend/html/index.html');
+  win.loadFile(__dirname + '/index.html');
 }
 
 app.on('ready', createWindow);

@@ -2,9 +2,9 @@
   "name": "dlive-bot",
   "version": "0.0.1",
   "description": "A Bot application for DLive",
-  "main": "./src/app.ts",
+  "main": "./dist/app.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-app": "webpack && electron ."
   },
   "keywords": [
     "dlive",
@@ -16,6 +16,11 @@
   "author": "Ashley Chapman",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-regular-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "@reactivex/rxjs": "^6.5.1",
     "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
@@ -27,10 +32,13 @@
     "reactstrap": "^8.0.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "awesome-typescript-loader": "^5.2.1",
+    "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^2.1.1",
     "electron": "^5.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",

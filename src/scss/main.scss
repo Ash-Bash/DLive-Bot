@@ -1,0 +1,18 @@
+@import './fontawesome/fontawesome.scss';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.absolute {
+    position: absolute;
+}
+
+.fullHeightExcludeBar {
+    min-height: calc(100% - 65.71px);
+}
+
+.bg-sidebar {
+    background-color: #f8f9fa;
+}
+
+.right {
+    float: right;
+}

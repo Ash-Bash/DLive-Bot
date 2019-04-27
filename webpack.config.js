@@ -1,9 +1,32 @@
+const webpack = require('webpack');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-var path = require("path");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const devMode = process.env.NODE_ENV !== 'production';
+
+const htmlPlugin = new HtmlWebPackPlugin({
+    template: __dirname + "/src/html/index.html",
+    filename: "./index.html"
+});
+
+const miniCssPlugin = new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: "app.min.css"
+});
+
+const copyFilesPlugin = new CopyWebpackPlugin([
+    { from: __dirname + '/src/assets', to: __dirname + '/dist/assets', force: true }
+]);
+
+const copyElectronFilesPlugin = new CopyWebpackPlugin([
+    { from: __dirname + '/src/app.ts', force: true }
+]);
 
 module.exports = {
     entry: {
-        common: './src/frontend/ts/main.tsx'
+        common: './src/ts/main.tsx'
     },
     output: {
         filename: "app.bundle.js",
@@ -39,16 +62,30 @@ module.exports = {
                   'style-loader',
                   MiniCssExtractPlugin.loader,
                   'css-loader',
-                  'sass-loader'
+                  {
+                    loader: 'sass-loader',
+                    options: {
+                      "includePaths": [
+                        path.resolve(__dirname, 'node_modules'),
+                        path.resolve(__dirname, 'dist'),
+                        path.resolve(__dirname, 'src')
+                      ]
+                    }
+                  }
                 ],
+            },
+            { 
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                loader: 'url-loader?limit=100000' 
             }
         ]
     },
 
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: "./app.bundle.css"
-        })
+        htmlPlugin, 
+        miniCssPlugin, 
+        copyFilesPlugin,
+        copyElectronFilesPlugin
     ],
 
     // When importing a module whose path matches one of the following, just
