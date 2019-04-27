@@ -4,7 +4,9 @@
   "description": "A Bot application for DLive",
   "main": "./dist/app.ts",
   "scripts": {
-    "start-app": "webpack && electron ."
+    "compile-code": "webpack",
+    "debug-app": "webpack && electron .",
+    "run-app": "electron ."
   },
   "keywords": [
     "dlive",

@@ -33,7 +33,7 @@ import {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    Dark Mode
                   </DropdownItem>
                   <DropdownItem>
                     Option 2
