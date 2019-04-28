@@ -1,6 +1,15 @@
 @import './fontawesome/fontawesome.scss';
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+@import './components/view.scss';
+@import './components/scrollview.scss';
+@import './components/chat.scss';
+@import './components/messagebox.scss';
+
+body {
+    overflow: hidden;
+}
+
 .absolute {
     position: absolute;
 }
@@ -12,6 +21,11 @@
 .bg-sidebar {
     background-color: #f8f9fa;
     max-width: 320px !important;
+}
+
+.contentView {
+    margin: 0;
+    padding: 0;
 }
 
 .right {

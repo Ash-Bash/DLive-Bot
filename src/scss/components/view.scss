@@ -1,0 +1,11 @@
+.view {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+    &.chat {
+        min-height: 100%;
+        max-height: 100%;
+        overflow: hidden !important;
+    }
+
+}

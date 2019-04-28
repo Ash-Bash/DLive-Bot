@@ -1,0 +1,30 @@
+.message {
+    padding: 5px;
+    text-overflow: wrap;
+    margin-bottom: 5px;
+    width: auto;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    .image_container {
+      padding-right: 5px;
+      img {
+        border-radius: 50%;
+      }
+    }
+    .message_content {
+        flex: 1;
+        text-align: left;
+        span {
+        font-weight: bold;
+        &:hover {
+            cursor: pointer;
+            }
+        }
+    }
+}
+
+.messageContainer {
+    margin: 10px;
+    margin-bottom: 0px;
+}

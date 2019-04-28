@@ -1,0 +1,39 @@
+.chatContainer {
+    min-height: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+
+    .chatContent, .chatInput {
+        display: block;
+    }
+
+    .chatContent {
+        min-height: calc(100% - 48px) !important;
+        max-height: calc(100% - 48px) !important;
+    }
+}
+
+.chatInput {
+    position: absolute;
+    height: 48px;
+    min-width: 100%;
+    max-width: 100%;
+    bottom: 0;
+    background-color: gainsboro;
+    
+    textarea {
+        height: 100%;
+        width: calc(100% - 72px);
+    }
+}
+
+.chatInputItem { 
+    display: inline; 
+    &.button {
+        float: right;
+        margin-right: 5px;
+        width: 64px;
+        height: 48px;
+    }
+}

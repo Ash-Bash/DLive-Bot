@@ -6,6 +6,9 @@ import { fab, faSpeakap } from '@fortawesome/free-brands-svg-icons';
 import { faCog, faHome, faUser, faUsers, faCommentAlt, faCode } from '@fortawesome/free-solid-svg-icons';
 import { Container, Row, Col, ListGroup, ListGroupItem, Badge  } from 'reactstrap';
 
+// custom components
+import { Chat } from './Chat/index';
+
 
 const containerStyle = {
     margin: '0px',
@@ -37,7 +40,7 @@ export class SplitView extends React.Component<any, IState> {
             selectedIndex: 0
         }
         this.selectedListItem.bind(this);
-      }
+    }
 
     selectedListItem(index: any) {
         this.setState({selectedIndex: index});
@@ -61,7 +64,16 @@ export class SplitView extends React.Component<any, IState> {
     }
 
     render() {
-      return (
+
+        var views = [
+            <Chat title="Test 1" />,
+            <Chat title="Test 2" />,
+            <Chat title="Test 3" />,
+            <Chat title="Test 4" />,
+            <Chat title="Test 5" />,
+        ];
+
+        return (
         <Container style={ containerStyle }>
             <Row className="absolute fullHeightExcludeBar" style={ rowStyle }>
                 <Col xs="3" className="bg-sidebar" style={ sidebarStyle }>
@@ -77,8 +89,8 @@ export class SplitView extends React.Component<any, IState> {
                     
                 </ListGroup>
                 </Col>
-                <Col>
-
+                <Col className="contentView">
+                    { views[this.state.selectedIndex] }
                 </Col>
             </Row>
         </Container>
