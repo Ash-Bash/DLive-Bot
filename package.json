@@ -31,7 +31,8 @@
     "lino-js": "^1.0.19",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "reactstrap": "^8.0.0"
+    "reactstrap": "^8.0.0",
+    "rxjs": "^6.5.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.8.1",
