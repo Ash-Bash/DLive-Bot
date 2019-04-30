@@ -66,11 +66,11 @@ export class SplitView extends React.Component<any, IState> {
     render() {
 
         var views = [
-            <Chat title="Test 1" />,
+            <div />,
             <Chat title="Test 2" />,
-            <Chat title="Test 3" />,
-            <Chat title="Test 4" />,
-            <Chat title="Test 5" />,
+            <div />,
+            <div />,
+            <div />,
         ];
 
         return (
